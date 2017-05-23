@@ -1,22 +1,63 @@
-// Common styles of the project
+html{
+	font-size: $em-base/16px * $site-scaller * 100 + %;
+	line-height: 1.2;
+}
+body{
+	margin: 0;
+	padding: 0;
+	color: $dark-color;
+	background-color: $light-color;
+	font-family: sans-serif;
+}
+hr {
+  display: block;
+  height: 1px;
+  border: 0;
+  border-top: 1px solid #ccc;
+  margin: 1em 0;
+  padding: 0;
+}
+a{
+	color: inherit;
+	&:hover{
+		text-decoration: none;
+	}
+}
+img{
+	max-width: 100%;
+	height: auto;
+}
+textarea{
+	height: rem(80px);
+	resize: vertical;
+}
+
+address{ font-style: normal; }
+
+
+[type="text"],
+[type="tel"],
+[type="email"],
+[type="search"],
+[type="url"],
+[type="date"],
+[type="password"],
+[type="time"],
+[type="number"],
+[type="file"],
+select,
+textarea{
+	box-sizing: border-box;
+	border: 1px solid #ccc;
+	padding: .5rem .5em;
+
+	&:focus{
+		outline: none;
+		box-shadow:inset 0px 0px 3px #555;
+	}
+}
 
 html, body {
     height: 100%;
 }
 
-.page {
-    
-}
-
-.page__wrapper {
-    min-height: 100%;
-    margin-bottom: -50px;
-}
-
-* html .page__wrapper {
-    height: 100%;
-}
-
-.page__buffer {
-    height: 50px;
-}

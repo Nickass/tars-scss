@@ -1,0 +1,48 @@
+.half{
+	width: 50%;
+	@media (max-width: $xs-w) {	width: auto; }
+}
+.left{
+	float: left;
+	text-align: left;
+	@media (max-width: $xs-w) {	float: none; }
+}
+.right{
+	float: right;
+	text-align: right;
+	@media (max-width: $xs-w) {
+		float: none;
+		text-align: left;
+	}
+}
+
+.f-left{ float: left; }
+.f-right{ float: right; }
+.va-middle{	vertical-align: middle; }
+.ta-center{	text-align: center; }
+.ta-left{ text-align: left; }
+.ta-right{ text-align: right; }
+
+.reset-list{ @include reset-list; }
+.clearfix{ @include clearfix; }
+.container{	
+	@include container;
+	padding: 0 rem($padding-container);
+}
+
+.page {
+    
+}
+
+.page__wrapper {
+    min-height: 100%;
+    margin-bottom: -50px;
+}
+
+* html .page__wrapper {
+    height: 100%;
+}
+
+.page__buffer {
+    height: 50px;
+}

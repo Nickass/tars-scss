@@ -1,4 +1,12 @@
 // Mixins.
+@function parseInt($n) {
+    @return $n / ($n * 0 + 1); 
+}
+
+@function px($rem){
+  @if(unit($rem) != 'rem') {@error "Incorrect value for function 'px'!";}
+  @return $em-base * parseInt($rem);
+}
 
 @mixin nl {
     margin: 0;
@@ -29,4 +37,55 @@
     text-justify: newspaper;
 }
 
-// You can add your own mixins here:
+@mixin reset-button{
+    box-sizing: border-box;
+    border: 0;
+    padding: 0;
+    display: inline-block;
+    background-color: transparent;
+}
+
+@mixin reset-input{
+    box-sizing: border-box;
+    border: 0;
+    padding: 0;
+    display: inline-block;  
+}
+
+@mixin vertical-rhythm($size, $bottom-rows: 2, $top-rows: 0, $use-height: false, $border: 0) {
+  @if(unit($size) == 'rem'){$size: px($size);}
+  @if(unit($border) == 'rem'){$border: px($border)}
+  $size: rem($size);
+  $border: rem($border);
+  $multiplier: ceil($size / $base-line-height);
+
+  @if $use-height {
+    $leftover:      $base-line-height * $multiplier - $size ;
+    height:         $size;
+    margin-top:     $base-line-height * $top-rows + $leftover / 2 ;
+    margin-bottom:  $base-line-height * $bottom-rows + $leftover / 2 ;
+    @if($border != 0){padding-top: ceil($border / $base-line-height) * $base-line-height - $border;}
+  }
+  @else {
+    font-size:      $size;
+    line-height:    $base-line-height * $multiplier;
+    margin-top:     $base-line-height * $top-rows ;
+    margin-bottom:  $base-line-height * $bottom-rows - $border ;
+  }
+}
+
+@mixin mod($name, $abstract: false, $separator: '--'){
+  $parent: &;
+  @if($abstract == false){
+    @at-root #{$parent + $separator + $name}{
+      @extend #{$parent};
+      @content;
+    }
+  }
+  @if($abstract == true){
+    @at-root #{'.' + $name}{
+      @extend #{$parent};
+      @content;
+    }
+  }
+}
