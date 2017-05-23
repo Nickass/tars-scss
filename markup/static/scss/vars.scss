@@ -1,2 +1,62 @@
-// File for scss-vars.
-// For example: main colors, paddings and so on.
+$prefix-for-webkit:    false;
+$prefix-for-mozilla:   false;
+$prefix-for-microsoft: false;
+$prefix-for-opera:     false;
+$prefix-for-spec:      false;
+$output-bourbon-deprecation-warnings: false;
+
+$em-base:16px;
+$site-scaller: 1.0; 
+$site-max-width: 1200px;
+$padding-container: $em-base;
+
+// Global settings for Susy
+$susy: (
+  output: float, // для исправления суб-пикселов isolate 
+  gutter-position: after, // before | inside | after
+  container: ($site-max-width / $em-base) + rem, // укажите максимальную ширину в любых единицах, например, 60em | auto
+  container-position: center, // center | left | right
+  columns: 12, // количество колонок
+  gutters: 1/3, // ширина пробельчика для каждой колонки
+  column-width: false, // false | ширина колонки задается только при math: static 
+  box-sizing: border-box, // content box | border box | padding box
+  last-flow: to, // последний элемент в ряду флоатится вправо, можно сменить
+
+  debug: (
+    image: show, // варианты: show | hide | show-columns | show-baseline 
+    color: rgba(#aa2, .25), // менять цвет у колонок
+    output: background, //  background / overlay 
+    toggle: top right, // положение переключателя для показа оверлея
+  ),
+  use-custom: (
+    background-image: false, // возможность использовать свой миксин background-image
+    background-options: false, // разные background миксины
+    box-sizing: false, // свой миксин box-sizing
+    clearfix: true, // свой миксин clearfix
+    rem: true,
+  )
+);
+
+$base-line-height: 1rem;
+$step: $base-line-height;
+
+
+$red:   #f00;
+$green: #0f0;
+$blue:  #00f;
+$gray:  #aaa;
+$black: #000;
+$white: #fff;
+
+$main-color: $green;
+$light-color: $white;
+$dark-color: $black;
+
+
+$xs-w: 560px;
+$sm-w: 780px;
+$md-w: 1024px;
+$lg-w: 1380px;
+
+$xs-h: 520px;
+$sm-h: 680px;
