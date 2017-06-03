@@ -1,19 +1,17 @@
+// Sizes.
 $em-base:16px;
 $site-scaller: 1.0; 
 $site-max-width: 1200px;
 $pd-container: $em-base;
 
 
-
-$base-line-height: 1rem;
-$step: $base-line-height;
-
-
+// Colors.
 $main-color: #ff0;
 $white: #fff;
 $black: #000;
 
 
+// Breakpoint.
 $xs-w: 560px;
 $sm-w: 780px;
 $md-w: 1024px;
@@ -21,3 +19,8 @@ $lg-w: 1380px;
 
 $xs-h: 520px;
 $sm-h: 680px;
+
+
+// If you use vertical-rhythm
+$base-line-height: 1rem;
+$step: $base-line-height;
