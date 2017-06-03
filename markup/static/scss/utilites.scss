@@ -27,22 +27,9 @@
 .clearfix{ @include clearfix; }
 .container{	
 	@include container;
-	padding: 0 rem($padding-container);
+	padding: 0 rem($pd-container);
 }
 
-.page {
-    
-}
-
-.page__wrapper {
-    min-height: 100%;
-    margin-bottom: -50px;
-}
-
-* html .page__wrapper {
-    height: 100%;
-}
-
-.page__buffer {
-    height: 50px;
-}
+.page { display: table; }
+.page__wrapper { display: table-row; height: 100%; }
+.page__footer { background: red; }

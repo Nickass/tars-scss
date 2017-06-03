@@ -1,7 +1,7 @@
 $em-base:16px;
 $site-scaller: 1.0; 
 $site-max-width: 1200px;
-$padding-container: $em-base;
+$pd-container: $em-base;
 
 // Global settings for Susy
 $susy: (
@@ -16,7 +16,7 @@ $susy: (
   last-flow: to, // последний элемент в ряду флоатится вправо, можно сменить
 
   debug: (
-    image: show, // варианты: show | hide | show-columns | show-baseline 
+    image: hide, // варианты: show | hide | show-columns | show-baseline 
     color: rgba(#aa2, .25), // менять цвет у колонок
     output: background, //  background / overlay 
     toggle: top right, // положение переключателя для показа оверлея
@@ -34,16 +34,9 @@ $base-line-height: 1rem;
 $step: $base-line-height;
 
 
-$red:   #f00;
-$green: #0f0;
-$blue:  #00f;
-$gray:  #aaa;
-$black: #000;
+$main-color: #ff0;
 $white: #fff;
-
-$main-color: $green;
-$light-color: $white;
-$dark-color: $black;
+$black: #000;
 
 
 $xs-w: 560px;

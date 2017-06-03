@@ -8,7 +8,7 @@
   @return $em-base * parseInt($rem);
 }
 
-@mixin nl {
+@mixin reset-list {
     margin: 0;
     padding: 0;
     text-indent: 0;
@@ -16,7 +16,7 @@
     list-style-position: outside;
 }
 
-@mixin cf {
+@mixin clearfix {
     &:before,
     &:after {
         display: table;
