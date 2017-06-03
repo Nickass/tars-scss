@@ -1,3 +1,10 @@
+$prefix-for-webkit:    false;
+$prefix-for-mozilla:   false;
+$prefix-for-microsoft: false;
+$prefix-for-opera:     false;
+$prefix-for-spec:      false;
+$output-bourbon-deprecation-warnings: false;
+
 @import 'bourbon/_bourbon.scss';
 @import 'susy/_susy.scss';
 
