@@ -30,6 +30,6 @@
 	padding: 0 rem($pd-container);
 }
 
-.page { display: table; }
+.page { display: table; width: 100%; }
 .page__wrapper { display: table-row; height: 100%; }
 .page__footer { background: red; }
