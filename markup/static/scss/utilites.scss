@@ -1,23 +1,5 @@
-.half{
-	width: 50%;
-	@media (max-width: $xs-w) {	width: auto; }
-}
-.left{
-	float: left;
-	text-align: left;
-	@media (max-width: $xs-w) {	float: none; }
-}
-.right{
-	float: right;
-	text-align: right;
-	@media (max-width: $xs-w) {
-		float: none;
-		text-align: left;
-	}
-}
-
-.f-left{ float: left; }
-.f-right{ float: right; }
+.to-left{ float: left; }
+.to-right{ float: right; }
 .va-middle{	vertical-align: middle; }
 .ta-center{	text-align: center; }
 .ta-left{ text-align: left; }
@@ -30,6 +12,13 @@
 	padding: 0 rem($pd-container);
 }
 
-.page { display: table; width: 100%; }
-.page__wrapper { display: table-row; height: 100%; }
-.page__footer { background: red; }
+.page { 
+	display: table;
+	width: 100%;
+	max-width: 100%;
+	table-layout: fixed;
+}
+.page__wrapper { 
+	display: table-row;
+	height: 100%; 
+}
